@@ -16,21 +16,21 @@ class StudentLesson(object):
         self.Lesson = Lesson
         self.myStudnt = myStudnt
       
-StudentList = []
+Student_List = []
 LessonList= []
   
 f=open("Student_List.txt","w")
 o = Student("tugce","bzkrt","1")
 o1= Student("ayca","ati","2")
-StudentList.append(o) 
-StudentList.append(o1)
+Student_List.append(o) 
+Student_List.append(o1)
 for i in range(0,2):
 
-    f.write(Student_List[i].ad)
+    f.write(Student_List[i].name)
     f.write("-")
-    f.write(Student_List[i].soyad)
+    f.write(Student_List[i].surname)
     f.write("-")
-    f.write(Student_List[i].numara)
+    f.write(Student_List[i].num)
     f.write("\n")
 
 f.close()
@@ -52,7 +52,7 @@ f.close()
 d = StudentLesson(de,o)
 
 x = input("student num: ")
-for i in StudentList:
+for i in Student_List:
     if x == i.num:
         print(i.name,i.surname,i.num)
 

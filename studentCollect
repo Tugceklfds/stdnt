@@ -1,0 +1,91 @@
+import operator
+
+class ogrenci(object):
+    """description of class"""
+
+    def __init__(self, ad,soyad,numara): 
+        self.ad = ad
+        self.soyad = soyad
+        self.numara=numara
+
+class ders(object):
+    def __init__(self,Derskodu,DersAdi):
+        self.DersKodu = Derskodu
+        self.DersAdi = DersAdi
+        
+class ogrenciders(object):
+    def __init__(self,Dersim,ogrencim):
+        self.Ders = Dersim
+        self.Ogrenci = ogrencim
+        
+f=open("ogrencilerlist.txt","w")
+ogrenciList = []
+dersList= []
+
+o = ogrenci("tugce","bozkurt","1")
+o1= ogrenci("ayca","bozkurt","2")
+o2 = ogrenci("mehmet","bozkurt","3")
+o3 = ogrenci("gulce","atan","4")
+o4 = ogrenci("selim","isik","5")
+o5 = ogrenci("berk","boz","6")
+o6 = ogrenci("perge","ozcan","7")
+o7 = ogrenci("berk","kdsfd","8")
+o8 = ogrenci("tuce","kfdf","9")
+o9 = ogrenci("hilal","seven","10")
+de = ders("101","mat")
+de1 = ders("102","edb")
+de2 = ders("103","fen")
+de3 = ders("104","turkce")
+de4 = ders("105","spor")
+de5 = ders("101","mat")
+de6 = ders("102","edb")
+de7 = ders("105","spor")
+de8 = ders("103","fen")
+de9 = ders("103","fen")
+
+d = ogrenciders(de,o)
+
+ogrenciList.append(o) 
+ogrenciList.append(o1) 
+ogrenciList.append(o2) 
+ogrenciList.append(o3) 
+ogrenciList.append(o4) 
+ogrenciList.append(o5) 
+ogrenciList.append(o6) 
+ogrenciList.append(o7) 
+ogrenciList.append(o8) 
+ogrenciList.append(o9)
+for i in range(0,10):
+
+    f.write(ogrenciList[i].ad)
+    f.write("-")
+    f.write(ogrenciList[i].soyad)
+    f.write("-")
+    f.write(ogrenciList[i].numara)
+    f.write("\n")
+
+dersList.append(de)
+dersList.append(de1)
+dersList.append(de2)
+dersList.append(de3)
+dersList.append(de4)
+dersList.append(de5)
+dersList.append(de6)
+dersList.append(de7)
+dersList.append(de8)
+dersList.append(de9)
+for a in range(0,10):
+
+    f.write(dersList[a].DersKodu)
+    f.write("-")
+    f.write(dersList[a].DersAdi)
+    f.write("\n")
+
+x = input("ogrenci numarasi: ")
+for i in ogrenciList:
+    if x == i.numara:
+        print(i.ad,i.soyad,i.numara)
+
+
+f.close()
+

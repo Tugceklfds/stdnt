@@ -21,9 +21,9 @@ ogrenciList = []
 dersList= []
 
 o = ogrenci("tugce","bozkurt","1")
-o1= ogrenci("ayca","bozkurt","2")
-o2 = ogrenci("mehmet","bozkurt","3")
-o3 = ogrenci("gulce","atan","4")
+o1= ogrenci("ayca","ati","2")
+o2 = ogrenci("akif","ersoy","3")
+o3 = ogrenci("gulce","ata","4")
 o4 = ogrenci("selim","isik","5")
 o5 = ogrenci("berk","boz","6")
 o6 = ogrenci("perge","ozcan","7")
